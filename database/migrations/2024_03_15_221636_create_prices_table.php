@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('prices', function (Blueprint $table) {
-            $table->ulid('item_id')->primary();
-            $table->integer('price_without_tax');
-            $table->integer('price_with_tax');
+            $table->ulid('price_id')->primary();
+            $table->char('item_id', 26);
+            $table->integer('price_without_tax')->default(0);
+            $table->integer('price_with_tax')->default(0);
             $table->integer('tax_rate')->default(10);
         });
     }

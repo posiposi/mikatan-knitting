@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('item_name', 26);
             $table->string('status')->default('stock');
             $table->char('user_id', 26)->nullable();
+            $table->string('description')->nullable();
             $table->dateTime('purchased_at')->nullable();
             $table->dateTime('created_at')->nullable();
             $table->dateTime('updated_at')->nullable();
