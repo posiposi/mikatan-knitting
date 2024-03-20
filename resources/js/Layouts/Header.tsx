@@ -2,22 +2,9 @@ import React from 'react';
 import { Box, Flex, Text, Link, Icon, Badge } from '@chakra-ui/react';
 import { FiShoppingCart } from 'react-icons/fi';
 import { FaUser } from 'react-icons/fa';
+import type { TopBanner } from '@/types/topBanner';
 
-export interface User {
-  id: number;
-  name: string;
-  email: string;
-  email_verified_at: string;
-}
-
-interface TopBannerProps {
-  cartItemCount: number;
-  auth: {
-    user: User;
-  };
-}
-
-const TopBanner: React.FC<TopBannerProps> = ({ cartItemCount, auth }) => {
+const TopBanner: React.FC<TopBanner> = ({ cartItemCount, auth }) => {
   return (
     <Box w="100%" bg="blue.600" color="white" px={4} py={2}>
       <Flex align="center" justify="space-between">
