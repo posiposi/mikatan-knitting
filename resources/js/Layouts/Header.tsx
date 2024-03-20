@@ -45,7 +45,7 @@ const TopBanner: React.FC<TopBanner> = ({ cartItemCount, auth }) => {
             </>
           )}
           <Link
-            href="/cart"
+            href="/"
             position="relative"
             p={2}
             _hover={{ textDecoration: 'none' }}
