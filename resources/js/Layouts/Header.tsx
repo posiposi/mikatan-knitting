@@ -36,7 +36,7 @@ const TopBanner: React.FC<TopBanner> = ({ cartItemCount, auth }) => {
 
               <Link
                 href={route('register')}
-                className="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400"
+                className="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400"
                 p={2}
                 _hover={{ textDecoration: 'none' }}
               >
