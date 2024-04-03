@@ -1,0 +1,33 @@
+components:
+  schemas:
+    type: array
+    items:
+      type: object
+      description: 商品
+      properties:
+        item_id:
+          type: string
+          description: 商品ID
+        item_name:
+          type: string
+          description: 商品名
+        description:
+          type: string
+          description: 説明
+        price_with_tax:
+          type: integer
+          description: 税込価格
+        price_without_tax:
+          type: integer
+          description: 税抜価格
+        tax_rate:
+          type: integer
+          description: 税率
+        item_image:
+          type: string
+          description: 商品画像
+        status:
+          type: string
+          description: 状態
+      required:
+        - item_id

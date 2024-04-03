@@ -1,0 +1,20 @@
+components:
+  examples:
+    items:
+      value:
+        - item_id: '1'
+          item_name: 桜色の巾着袋
+          description: 春先にぴったりの可愛い巾着です！
+          price_with_tax: 880
+          price_without_tax: 800
+          tax_rate: 10
+          item_image: https://mikatan-knitting.s3.ap-northeast-1.amazonaws.com/items/999999.jpg
+          status: stock
+        - item_id: '2'
+          item_name: 青い帽子
+          description: かわいい帽子です！
+          price_with_tax: 1650
+          price_without_tax: 1500
+          tax_rate: 10
+          item_image: https://mikatan-knitting.s3.ap-northeast-1.amazonaws.com/items/999999.jpg
+          status: stock
