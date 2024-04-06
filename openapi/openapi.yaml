@@ -6,11 +6,11 @@ info:
   contact:
     name: Daichi Sugiyama
 servers:
-  - url: 'https://local.mikatan-knitting/api/v1'
+  - url: 'https://local.mikatan-knitting.com/api/v1'
     description: ローカル環境
-  - url: 'https://test.mikatan-knitting/api/v1'
+  - url: 'https://test.mikatan-knitting.com/api/v1'
     description: テスト環境
-  - url: 'https://www.mikatan-knitting/api/v1'
+  - url: 'https://www.mikatan-knitting.com/api/v1'
     description: 本番環境
 paths:
   $ref: ./paths/items.yaml
