@@ -11,6 +11,7 @@ final class Item
         private ItemName $itemName,
         private Description $description,
         private Status $status,
+        private Image $image,
         private Price $price
     ) {
     }
@@ -22,6 +23,7 @@ final class Item
             'item_name' => $this->itemName->toString(),
             'description' => $this->description->toString(),
             'status' => $this->status->toString(),
+            'image' => $this->image->toString(),
             'price_id' => $this->price->priceId()->toString(),
             'price_without_tax' => $this->price->price(),
             'price_with_tax' => $this->price->priceWithTax(),
@@ -51,6 +53,7 @@ final class Item
             ItemName::from($values['item_name']),
             Description::from($values['description']),
             Status::from($values['status']),
+            Image::from($values['image']),
             Price::fromArray($values)
         );
     }
