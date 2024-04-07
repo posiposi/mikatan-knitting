@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\src\Items\Domain;
+namespace Core\src\Items\Domain\Models;
 
 use Core\src\Trait\ValueObjectString;
 

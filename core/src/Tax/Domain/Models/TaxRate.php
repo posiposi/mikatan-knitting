@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\src\Tax\Domain;
+namespace Core\src\Tax\Domain\Models;
 
 use Core\src\Trait\ValueObjectInt;
 

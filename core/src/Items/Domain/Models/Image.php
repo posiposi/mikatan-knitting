@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Items\Domain;
+namespace Core\src\Items\Domain\Models;
 
 use Core\src\Trait\ValueObjectString;
 
-final class Status
+final class Image
 {
     use ValueObjectString;
 
