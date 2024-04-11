@@ -13,6 +13,5 @@ final class ItemId
     public function __construct(private string $value)
     {
         $this->validateLengthLimit(self::ITEM_ID_MAX_LENGTH, '不正な商品IDです。');
-        $this->validateNotEmpty('商品IDが存在しません。');
     }
 }
