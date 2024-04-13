@@ -2,6 +2,7 @@
 
 namespace App\Models\Item;
 
+use App\Models\Price\EloquentPrice;
 use Doctrine\DBAL\Query;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Filament\Tables\Filters\QueryBuilder as FiltersQueryBuilder;
@@ -9,6 +10,7 @@ use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class EloquentItem extends Model
 {
@@ -33,6 +35,11 @@ class EloquentItem extends Model
     public function images()
     {
         return $this->hasMany(EloquentItemImage::class, 'item_id', 'item_id');
+    }
+
+    public function price(): HasOne
+    {
+        return $this->hasOne(EloquentPrice::class, 'item_id', 'item_id');
     }
 
     public function getAllItems(): Collection

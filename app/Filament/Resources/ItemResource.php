@@ -34,6 +34,9 @@ class ItemResource extends Resource
                     'canceled' => 'キャンセル',
                     'sold' => '購入済み',
                 ])->default('stock')->label('状態'),
+                TextInput::make('price_without_tax')
+                    ->integer()
+                    ->label('価格'),
                 TextArea::make('description')->label('説明'),
                 FileUpload::make('attachment')
                     ->disk('s3')
@@ -51,6 +54,9 @@ class ItemResource extends Resource
                 TextColumn::make('item_name')->label('商品名'),
                 ImageColumn::make('images.image')->disk('s3')->label('商品画像'),
                 TextColumn::make('status')->label('状態'),
+                // TODO ¥マークを表示する
+                TextColumn::make('price.price_without_tax')->label('税抜価格'),
+                TextColumn::make('price.price_with_tax')->label('税込価格'),
                 TextColumn::make('user_id')->label('購入者ID'),
                 TextColumn::make('description')->label('説明'),
                 TextColumn::make('purchased_at')->label('購入日時'),
