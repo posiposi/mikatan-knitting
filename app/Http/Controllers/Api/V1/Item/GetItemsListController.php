@@ -14,7 +14,6 @@ class GetItemsListController extends Controller
     public function __invoke()
     {
         $itemsList = $this->useCase->execute();
-        // TODO Inertiaでレンダリングするように変更
         return response()->json($itemsList->toArrayFromModel());
     }
 }
