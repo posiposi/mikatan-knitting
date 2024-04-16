@@ -26,20 +26,20 @@ interface IndexCardProps {
 }
 
 const IndexCard = ({ props }: IndexCardProps) => {
-  console.log(props);
   return (
-    <Card maxW="sm">
+    <Card maxW="sm" className="item-card-wrapper">
       <CardBody>
         <Image
           src={props.image}
-          alt="Green double couch with wooden legs"
+          alt="商品画像"
           borderRadius="lg"
+          className="item-card-image"
         />
         <Stack mt="6" spacing="3">
           <Heading size="md">{props.item_name}</Heading>
-          <Text>{props.description}</Text>
+          <Text className="item-description-text">{props.description}</Text>
           <Text color="blue.600" fontSize="2xl">
-            $450
+            ¥{props.price_with_tax}(税込)
           </Text>
         </Stack>
       </CardBody>
