@@ -25,6 +25,7 @@ class EditItem extends EditRecord
     protected function mutateFormDataBeforeSave(array $data): array
     {
         $this->imageOriginalFileName = $data['attachment'];
+        $this->priceWithoutTax = $data['price_without_tax'];
         return $data;
     }
 
@@ -46,8 +47,8 @@ class EditItem extends EditRecord
             'image' => 'https://' . env('AWS_BUCKET') . '.s3.' . env('AWS_DEFAULT_REGION') . '.amazonaws.com/' . $this->imageOriginalFileName,
         ]);
         $this->eloquentPrice::where('item_id', $this->record->item_id)->update([
-            'price_without_tax' => $this->record->price_without_tax,
-            'price_with_tax' => $this->record->price_without_tax * (self::BASE_MULTIPLIER + (self::TAX_RATE / self::TAX_RATE_DIVISOR)),
+            'price_without_tax' => $this->priceWithoutTax,
+            'price_with_tax' => $this->priceWithoutTax * (self::BASE_MULTIPLIER + (self::TAX_RATE / self::TAX_RATE_DIVISOR)),
         ]);
         $this->record->updated_at = now();
         $this->record->save();

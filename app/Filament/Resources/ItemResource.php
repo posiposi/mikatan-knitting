@@ -14,10 +14,13 @@ use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use App\Filament\Resources\ItemResource\RelationManagers\ItemHasPriceRelationManager;
+use App\Models\Price\EloquentPrice;
 
 class ItemResource extends Resource
 {
     protected static ?string $model = EloquentItem::class;
+    protected static ?string $priceModel = EloquentPrice::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -36,6 +39,7 @@ class ItemResource extends Resource
                 ])->default('stock')->label('状態'),
                 TextInput::make('price_without_tax')
                     ->integer()
+                    ->required()
                     ->label('価格'),
                 TextArea::make('description')->label('説明'),
                 FileUpload::make('attachment')
@@ -79,7 +83,7 @@ class ItemResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            ItemHasPriceRelationManager::class,
         ];
     }
 
