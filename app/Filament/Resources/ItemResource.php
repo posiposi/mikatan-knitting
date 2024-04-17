@@ -58,7 +58,6 @@ class ItemResource extends Resource
                 TextColumn::make('item_name')->label('商品名'),
                 ImageColumn::make('images.image')->disk('s3')->label('商品画像'),
                 TextColumn::make('status')->label('状態'),
-                // TODO ¥マークを表示する
                 TextColumn::make('price.price_without_tax')->label('税抜価格'),
                 TextColumn::make('price.price_with_tax')->label('税込価格'),
                 TextColumn::make('user_id')->label('購入者ID'),
