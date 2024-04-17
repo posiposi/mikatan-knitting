@@ -5,19 +5,7 @@ import { Grid, GridItem } from '@chakra-ui/react';
 import Header from '@/Layouts/Header';
 import axios, { AxiosResponse } from 'axios';
 import { useEffect, useState } from 'react';
-
-// TODO typeに切り出し
-interface ItemsList {
-  item_id: string;
-  item_name: string;
-  description: string;
-  status: string;
-  image: string;
-  price_id: string;
-  price_without_tax: number;
-  price_with_tax: number;
-  tax_rate: number;
-}
+import { ItemsList } from '@/types/itemsList';
 
 export default function Welcome({
   auth,

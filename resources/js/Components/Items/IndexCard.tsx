@@ -10,20 +10,7 @@ import {
   Text,
   Divider,
 } from '@chakra-ui/react';
-
-interface IndexCardProps {
-  props: {
-    item_id: string;
-    item_name: string;
-    description: string;
-    status: string;
-    image: string;
-    price_id: string;
-    price_without_tax: number;
-    price_with_tax: number;
-    tax_rate: number;
-  };
-}
+import { IndexCardProps } from '@/types/indexCardProps';
 
 const IndexCard = ({ props }: IndexCardProps) => {
   return (
