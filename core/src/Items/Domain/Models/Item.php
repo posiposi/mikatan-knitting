@@ -49,12 +49,12 @@ final class Item
     public static function fromArray(array $values): self
     {
         return new self(
-            ItemId::from($values['item_id']),
-            ItemName::from($values['item_name']),
-            Description::from($values['description']),
-            Status::from($values['status']),
-            Image::from($values['image']),
-            Price::fromArray($values)
+            ItemId::from($values['item_id'] ?? ''),
+            ItemName::from($values['item_name'] ?? ''),
+            Description::from($values['description'] ?? ''),
+            Status::from($values['status'] ?? ''),
+            Image::from($values['image'] ?? ''),
+            Price::fromArray($values) ?? 0
         );
     }
 }
