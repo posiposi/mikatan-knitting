@@ -10,7 +10,7 @@ final class ItemId
 
     const ITEM_ID_MAX_LENGTH = 26;
 
-    public function __construct(private string $value)
+    public function __construct(private ?string $value)
     {
         $this->validateLengthLimit(self::ITEM_ID_MAX_LENGTH, '不正な商品IDです。');
     }
