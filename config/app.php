@@ -109,7 +109,7 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'ja_JP',
 
     /*
     |--------------------------------------------------------------------------
@@ -169,6 +169,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\Filament\AdminPanelProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ItemsServiceProvider::class,
     ])->toArray(),
 
     /*

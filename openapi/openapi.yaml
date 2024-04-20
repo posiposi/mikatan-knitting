@@ -1,0 +1,19 @@
+openapi: 3.1.0
+info:
+  title: Items
+  version: '1.0'
+  description: 商品関連のAPI
+  contact:
+    name: Daichi Sugiyama
+servers:
+  - url: 'https://local.mikatan-knitting.com/api/v1'
+    description: ローカル環境
+  - url: 'https://test.mikatan-knitting.com/api/v1'
+    description: テスト環境
+  - url: 'https://www.mikatan-knitting.com/api/v1'
+    description: 本番環境
+paths:
+  $ref: ./paths/items.yaml
+tags:
+  - name: items
+    description: 商品に関するAPI群
