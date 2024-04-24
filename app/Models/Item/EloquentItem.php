@@ -3,6 +3,7 @@
 namespace App\Models\Item;
 
 use App\Models\Price\EloquentPrice;
+use Carbon\Carbon;
 use Doctrine\DBAL\Query;
 use Doctrine\DBAL\Query\QueryBuilder;
 use Filament\Tables\Filters\QueryBuilder as FiltersQueryBuilder;
@@ -49,5 +50,15 @@ class EloquentItem extends Model
         $query->leftJoin('prices', 'items.item_id', '=', 'prices.item_id')
             ->leftjoin('item_images', 'items.item_id', '=', 'item_images.item_id');
         return $query->get();
+    }
+
+    public function updateStatusByItemId(string $itemId)
+    {
+        $query = $this->newQuery();
+        $query->where('item_id', $itemId)
+            ->update([
+                'status' => 'sold',
+                'purchased_at' => Carbon::now(),
+            ]);
     }
 }
