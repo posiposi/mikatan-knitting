@@ -27,4 +27,7 @@ Route::prefix('v1')->group(function () {
         // 商品購入
         Route::get('/{item_id}/checkout', CheckoutItemController::class)->name('item.checkout');
     });
+    Route::prefix('/checkout')->group(function () {
+        Route::post('/sessions');
+    });
 });
