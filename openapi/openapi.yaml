@@ -13,7 +13,8 @@ servers:
   - url: 'https://www.mikatan-knitting.com/api/v1'
     description: 本番環境
 paths:
-  $ref: ./paths/items.yaml
+  /items:
+    $ref: 'paths/item/items.yaml'
 tags:
   - name: items
     description: 商品に関するAPI群

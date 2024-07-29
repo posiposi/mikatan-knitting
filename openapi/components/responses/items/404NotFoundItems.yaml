@@ -1,0 +1,10 @@
+description: Items Not Found
+content:
+  application/json:
+    schema:
+      $ref: '../../schemas/common/404NotFound.yaml'
+    examples:
+      itemsNotFound:
+        value:
+          code: '404'
+          message: '商品が見つかりませんでした。'

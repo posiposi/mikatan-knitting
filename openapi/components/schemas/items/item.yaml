@@ -1,0 +1,13 @@
+type: object
+description: 商品
+required:
+  - item_id
+properties:
+  item_id: { type: string, example: 商品ID }
+  item_name: { type: string, example: 商品名 }
+  description: { type: string, example: 説明 }
+  price_with_tax: { type: integer, example: 税込価格 }
+  price_without_tax: { type: integer, example: 税抜価格 }
+  tax_rate: { type: integer, example: 税率 }
+  item_image: { type: string, example: 商品画像 }
+  stock: { type: boolean, example: 在庫 }
