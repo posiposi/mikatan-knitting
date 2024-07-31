@@ -15,9 +15,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd frontend
           npm install
+
       - name: Run format and lint
         run: |
-          cd frontend
           npm run check
