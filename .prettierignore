@@ -1,3 +1,13 @@
 # Ignore artifacts:
 build
 coverage
+node_modules
+.vscode/*
+*.yml
+build
+dist
+dist-ssr
+*.local
+logs
+*.log
+.DS_Store

@@ -17,7 +17,7 @@ export default function Welcome({
 }: PageProps<{
   laravelVersion: string;
   phpVersion: string;
-  itemsList: any;
+  itemsList: ItemsList[];
 }>) {
   return (
     <>
